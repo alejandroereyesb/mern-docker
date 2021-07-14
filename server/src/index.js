@@ -12,7 +12,7 @@ const PORT = 8080;
 //require('./src/database');
 
 // Routes
-//const postRouter = require('./routes/post.router.js');
+//const postRouter = require('./routes/post.routes.js');
 
  const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build");
 
