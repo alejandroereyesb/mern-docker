@@ -1,8 +1,8 @@
 // server.js
 import bodyParser from 'body-parser';
 import express from 'express';
-// import './config/mongodb.config';
-// import postRouter from './routes/post.router';
+import './config/mongodb.config';
+import postRouter from './routes/post.routes';
 
 const app = express();
 const PORT = 8080;
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 
 // Server API's
-// app.use('/api/posts', postRouter);
+app.use('/api/posts', postRouter);
 
 app.get('/', (req, res) => {
   res.status(200).send('API Gateway in development');

@@ -2,8 +2,8 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import path from 'path';
-// import './config/mongodb.config';
-// import postRouter from './routes/post.router';
+import './config/mongodb.config';
+import postRouter from './routes/post.routes';
 
 const app = express();
 const PORT = 8080;
@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(express.static(CLIENT_BUILD_PATH));
 
 // Server API's
-// app.use('/api/posts', postRouter);
+app.use('/api/posts', postRouter);
 
 // Server React Client
 app.get("/", function(req, res) {
