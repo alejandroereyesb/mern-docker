@@ -56,3 +56,51 @@ docker build -t myapp-server:1 .
 docker images
 docker run --name "myapp-server" -p 80:8080 myapp-server:1
 docker ps
+
+
+### Endpoints API REST - examples
+
+- Create new post:
+    - `POST http://localhost:8080/api/posts`
+
+Body:
+- Example 1
+```javascript
+{
+"title":"Se acaban las tortillas del teatro",
+"body":"La famosa cafetería del teatro agota existencias de tortilla. Nos pasamos a las barritas con tomate",
+"author":"Alejandru Regex"
+}
+```
+
+- Example 2
+```javascript
+{
+"title": "¿Dónde están mis amigos?",
+"body": "Huele a que nos vamos al rocafría a por tarta de limón",
+"author": "Alvaru"
+}
+``` 
+
+- Return all posts
+    - `GET http://localhost:8080/api/posts/`
+
+- Edit an existent post by ID
+    - `PATCH http://localhost:8080/api/posts/:post_id`
+    - `PATCH http://localhost:8080/api/posts/61dd7868491e9c004ae1833c`
+
+Body with new data:
+```javascript
+{
+"title": "Vamos a por un margarita",
+"body": "El mexicano amplía capacidad para que vaya todo The Bridge",
+"author": "Muchelle"
+}
+```
+
+- Delete an existent post by ID
+    - `DELETE http://localhost:8080/api/posts/:post_id`
+    - `DELETE http://localhost:8080/api/posts/61dd7868491e9c004ae1833c`
+
+
+
