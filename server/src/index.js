@@ -6,13 +6,13 @@ import './config/mongodb.config';
 import postRouter from './routes/post.routes';
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Our DB Configuration
 //require('./src/database');
 
 // Routes
-//const postRouter = require('./routes/post.routes.js');
+//const postRouter = require('./routes/post.router.js');
 
  const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build");
 

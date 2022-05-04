@@ -6,7 +6,7 @@ import './config/mongodb.config';
 import postRouter from './routes/post.routes';
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.port || 8080;
 
 // Our DB Configuration
 //require('./src/database');
