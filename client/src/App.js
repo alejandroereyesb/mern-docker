@@ -16,15 +16,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita <code>src/App.js</code> y guarda para ver los cambios.
-        </p>
-        <p>
-          {data.data ? "Número de elemento en BBDD: " + data.data.length : "BBDD vacía"}
-        </p>
-        
-        <h2>Listado de elementos</h2>
+      
+      <h1>Listado de elementos</h1>
+      <p>
+        {data.data ? "Número de elemento en BBDD: " + data.data.length : "BBDD vacía"}
+      </p>
         <ul>
           {data.data ? data.data.map((item) => <li style={{"list-style": "none"}}>{item.title}</li>) : "vacio"}
         </ul>
